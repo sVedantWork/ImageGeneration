@@ -1,22 +1,46 @@
+1] VAEs
+
 # ImgGenVAE: What is this project ?
 
-The basic purpose of this project is to combine my theoretical knowledge of Variational Autoencoders (vae) and Tensorflow to build a vae for the task of dataset
-generation
+The basic purpose of this project is to combine my theoretical knowledge of Variational Autoencoders (vae) and Tensorflow to build a VAE from scratch for the task of dataset generation.
 
 # What dataset and libraries are used ?
 
-This project makes use of Tensorflow and Keras Functional API for developing the VAE as well as the pre-processing pipeline. The SoundFile, and Librosa libraries
-are also used to create different components of the sound pre-processing pipeline. Other than this, the OS and Pickle libraries are used for loading and saving
-the model as well as creating folders as needed. The "Free Sound Digits Dataset" is used to train this specific model.
+This project makes use of Tensorflow and Keras Functional API for developing the VAE. Other than this, the OS and Pickle libraries are used for loading and saving
+the model as well as creating folders as needed. The "Fashion Mnist" dataset is used to train this specific model.
 
 # How to use this program ?
 
-Just download the .ipynb file and ensure that you have an Nvidia GPU available with cuDNN installed on your local system. Please change the file paths for where
-the pre-processed, post-processed dataset is stored as well as all the directories where different components of the model and required files are saved. After making
-the appropriate edits just run all the cells and the model should be able to learn and generate the audio based on files in your dataset.
+Just download the ImgGenVAE.ipynb file and ensure that you have an Nvidia GPU available with cuDNN installed on your local system. Just run all the files to train the
+model on the fashion mnist dataset. Other image datasets such as Cifar-10, Cifar-100, Regular Mnist can also be used for training the model based on individual goals.
 
 # Future Development ?
 
-Currently, I use an implementation of the Griffim-Lim algorithm to obtain sound from the mel spectograms that I generate with my VAE. Due to this, the sound generated
-is very robotic and does not account for pitch and modulation in sound. Thus, I'm unable to use this model to generate music like Beethoven, Mozart, etc. I'm trying to get past this obstacle by learning more theory about sound generation and audio signal pre-processing and further develop this project to be effective for more 
-refined sound based tasks.
+Currently, this VAE has a fairly good distribution as seen in the image in the code cell and it does create fairly good images of all the classes in the fashion_mnist
+dataset. To further develop this project, I'm going to work on hyperparameter tuning and adding Batchnormalization layer, as well as a Dropout layer to see if I 
+can improve the distribution of points in the latent space as represented on the graph.
+
+2] GAN
+
+# GAN: What is this project ?
+
+The basic purpose of this project is to combine my existing knowledge of Variational Autoencoders (VAE), Generative Adversarial Network (GAN),and Tensorflow to 
+build a GAN from scratch for the task of dataset generation. The primary focus of this project is on Image Datasets.
+
+# What dataset and libraries are used ?
+
+This project makes use of Tensorflow and Keras Sequential API for developing the GAN. Other than this, the OS and Pickle libraries are used for loading and saving
+the model as well as creating folders as needed. The "Fashion Mnist" dataset is used to train this specific model.
+
+# How to use this program ?
+
+Just download the Generative_Adversarial_Networks.ipynb file and ensure that you have an Nvidia GPU available with cuDNN installed on your local system. 
+Just run all the files to train the model on the fashion mnist dataset. Other image datasets such as Cifar-10, Cifar-100, Regular Mnist can also be used 
+for training the model based on individual goals.
+
+# Future Development ?
+
+Currently, this GAN suffers from a serious "mode collapse" issue and quality of the generated images has a lot of room for improvement. My current goal is to improve my 
+theoretical knowledge of GANs, learn about Wasserstein loss and implement that loss function in my GAN to handle the mode collapse issue and work on hyperparameter
+tuning to improve the quality of my generated images.
+
