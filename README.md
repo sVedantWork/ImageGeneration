@@ -1,4 +1,4 @@
-1] VAEs
+1] VAEs : A variational autoencoder is a generative model with an encoder and decoder which learns the latent representation from input, parameterizes it based on mean and std deviation of the input and trains a decoder which can infer an output similar to the input based on the latents provided.
 
 # ImgGenVAE: What is this project ?
 
